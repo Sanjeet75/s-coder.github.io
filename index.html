@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+    <title>{ Coder }</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <style>
+        #main {
+            width: 100%;
+            height: 500px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark">
+        <div class="container-fluid ">
+
+            <a class="navbar-brand text-success" href="#">{ <i>S</i> -Coder }</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topic
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#web">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#android">Android Development</a></li>
+                            <li><a class="dropdown-item" href="#programming">Programing language</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#Loginmodal">Login</button>
+                    <button class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#sing-upmodal">Sing-up</button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--login Modal -->
+    <div class="modal fade" id="Loginmodal" tabindex="-1" aria-labelledby="LoginmodalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="LoginmodalLabel">Login to { <i>S</i> -Coder }</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form style="text-align: center;">
+
+                            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                            <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--sing-up Modal -->
+    <div class="modal fade" id="sing-upmodal" tabindex="-1" aria-labelledby="sing-upmodalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning" id="sing-upmodalLabel">Create account in { <i>S</i> -Coder }
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Text">
+                        <label for="floatingInput">First Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Text">
+                        <label for="floatingInput">Last Name</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Password</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary">Create account</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide  carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Weolcome to <a class="navbar-brand text-dark" href="#">{ <i>S</i> -Coder }</a></h5>
+                    <p>Technology News and Development </p>
+                    <button class="btn btn-outline-success "><a href="Technology.html"
+                            style="text-decoration: none; color: rgb(28, 41, 28); font-size: 20px;">
+                            Technology</a></button>
+                    <button class="btn btn-outline-warning "><a href="#web"
+                            style="text-decoration: none; color: rgb(133, 131, 131) ;font-size: 20px;">Web Development
+                        </a></button>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/4.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>The best web developer </h3>
+                    <p style="font-size: 20px;">Best coder here</p>
+                    <button class="btn btn-outline-secondary "><a href="#programming"
+                            style="text-decoration: none; color: rgb(128, 217, 240); font-size: 20px;">
+                            Programming Languages</a></button>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>The developer<a class="navbar-brand" href="#"> { workspace platform }</a></h4>
+                    <p>developer experience.</p>
+                    <button class="btn btn-outline-light "><a href="#android"
+                            style="text-decoration: none; color: rgb(0, 0, 0) ;font-size: 20px;">App development
+                        </a></button>
+
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"> Feature of Coding <span class="text-muted">Types and Features</span>
+                </h2>
+                <p class="lead">“A computer is like a violin. You can imagine a novice trying ﬁrst a phonograph and
+                    then
+                    a violin. The latter, he says, sounds terrible. That is the argument we have heard from our
+                    humanists and most of our computer scientists. Computer programs are good, they say, for
+                    particular
+                    purposes, but they aren’t ﬂexible. Neither is a violin, or a typewriter, until you learn how to
+                    use
+                    it.” <br>
+                    Feature Flags are a software development technique that allows us to control the release of
+                    features
+                    independent of code deployment. This allows us to iterate quicker; testing features before they
+                    are
+                    complete to reduce risk and increase flow." <br>
+                    For computers, mobile phones, tablets, and other
+                    similar electronic devices to work, a programming language is necessary that tells them the
+                    commands
+                    and allows them to complete different activities. There are several types and features of
+                    programming languages depending on their philosophy and objectives.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/f2.jpg"
+                    lass="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+                    focusable="false" alt="">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">
+
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">What is a programming language? <span class="text-muted"></span></h2>
+                <p class="lead">A programming language consists of a vocabulary containing a set of grammatical
+                    rules
+                    intended to convey instructions to a computer or computing device to perform specific tasks.
+
+                    Each programming language has a unique set of keywords along with a special syntax to organize
+                    the
+                    software’s instructions.
+
+                    There are low-level and high-level programming languages which, although simple compared to
+                    human
+                    languages, are more complex than machine languages. <br>
+                    Low-level languages include assembly and machine languages. An assembly language contains a list
+                    of
+                    basic instructions and is much harder to read than a high-level language.
+
+                    High-level languages, on the other hand, are designed to be easy to read and understand,
+                    allowing
+                    programmers to write source codes naturally, using logical words and symbols.
+                    The following activities can be performed: <br>
+
+                    > Programs and applications development. <br>
+                    > Artificial intelligence development. <br>
+                    > Database development.<br>
+                    > Video game development.<br>
+                    > Development of drivers and hardware interface.<br>
+                    > Internet and web pages development.<br>
+                    > Script development.<br></p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="images/f3.jpg"
+                    lass="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+                    focusable="false" alt="">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div>
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">What is a Web Developer? <span class="text-muted">Checkmate.</span>
+                    </h2>
+                    <p class="lead">A web developer is responsible for programming the code that “tells” a website how
+                        to
+                        function. A developer builds a website from the bottom up, which means designing it in such a
+                        way
+                        that end users have no difficulty navigating the site. The website should not be so simple that
+                        it
+                        does not appeal to advanced users, nor should it be so complicated that the beginner is easily
+                        lost
+                        in the process.
+
+                        Web development can be divided into three parts: code that executes in a web browser and
+                        determines
+                        what customers or clients will see when they land on a website (client-side scripting); code
+                        that
+                        executes on a web server and powers the behind-the-scenes mechanics of how a website works
+                        (server-side scripting); and database technology, which helps to keep a website running smoothly
+                        and
+                        efficiently. Large-scale web projects often divide these tasks among multiple web developers.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/f1.jpg"
+                        lass="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">
+
+                </div>
+            </div>
+            <hr>
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">
+                        What is an App Developer?<span class="text-muted">Learn here.</span>
+                    </h2>
+                    <p class="lead">
+                        When it comes to technology, there are plenty of career paths one can take. One area that has
+                        seen an incredible rise in popularity is that of app development. There are literally millions
+                        of apps available today, from music apps to banking apps. that help people perform specific
+                        tasks.
+
+                        An app developer is a computer software engineer whose primary responsibilities include
+                        creating, testing and programming apps for computers, mobile phones, and tablets. These
+                        developers typically work in teams, and think of ideas and concepts either for the general
+                        public, or for a specific customer need.
+
+                        App developers understand coding languages and how to use them, and may also work alongside
+                        graphic artists, data scientists, and other software experts to create applications. They also
+                        test and fix any bugs that are found before the product is launched.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="images/android.jpg"
+                        lass="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+                        focusable="false" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container--1400" id="programming" style="font-size: 30px; font-weight: 20px;">
+        <article class="article my-5">
+            <div class="article__top">
+                <h1 class="heading heading--1">Programming Languages: Types and Features</h1>
+
+            </div>
+            <section class="article__content">
+                <div class="content-section content-section--article">
+                    <p><span style="font-weight: 400;">For computers, mobile phones, tablets, and other similar
+                            electronic devices to work, a programming language is necessary that tells them the
+                            commands and allows them to complete different activities. There are several types and
+                            features of programming languages depending on their philosophy and objectives.</span>
+                    </p>
+                    <p><span style="font-weight: 400;">Throughout this post, we will reveal a detailed
+                            classification of programming languages, with their features and differences that
+                            distinguish them from each other. In addition, you will discover which is the best
+                            language for web programming. Are you ready? There is no time to lose. </span></p>
+                    <h2>What is a programming language?</h2>
+                    <p><span style="font-weight: 400;">A programming language consists of a vocabulary containing a
+                            set of grammatical rules intended to convey instructions to a computer or computing
+                            device to perform specific tasks. </span></p>
+                    <p><span style="font-weight: 400;">Each programming language has a unique set of keywords along
+                            with a special syntax to organize the software’s instructions.</span></p>
+                    <p><span style="font-weight: 400;">There are low-level and high-level programming languages
+                            which, although simple compared to human languages, are more complex than machine
+                            languages. </span></p>
+
+                    <p><span style="font-weight: 400;">Low-level languages include assembly and machine languages.
+                            An assembly language contains a list of basic instructions and is much harder to read
+                            than a high-level language.</span></p>
+                    <p><span style="font-weight: 400;">High-level languages, on the other hand, are designed to be
+                            easy to read and understand, allowing programmers to write source codes naturally, using
+                            logical words and symbols.</span></p>
+                    <p><span style="font-weight: 400;">Throughout the evolution of computers, hundreds of different
+                            programming languages have been created for various types of development. </span></p>
+                    <p><span style="font-weight: 400;">The field of programming is very wide, so the use of a
+                            particular language will depend on the objectives to be achieved. Logical, isn’t
+                            it?</span></p>
+                    <p><span style="font-weight: 400;">The following activities can be performed:</span></p>
+                    <ul>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Programs and applications
+                                development.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Artificial intelligence
+                                development.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Database development.</span>
+                        </li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Video game development.</span>
+                        </li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Development of drivers and
+                                hardware interface.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Internet and web pages
+                                development.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Script development.</span>
+                        </li>
+                    </ul>
+                    <h2>Differences between natural language and programming language</h2>
+                    <p><span style="font-weight: 400;">Natural language is the language spoken by people, while
+                            programming language is intended for machines. Both languages present important
+                            similarities, such as the differentiation they make between syntax and semantics, their
+                            purpose to communicate and the existence of a basic composition on both.</span></p>
+                    <p><span style="font-weight: 400;">Generally speaking, there are several similarities and points
+                            in common, for example, the two types were created to communicate ideas, expressions,
+                            and instructions. However, it is also possible to identify some differences.</span></p>
+
+                    <p>&nbsp;</p>
+                    <p><span style="font-weight: 400;">When it comes to the differences between natural language and
+                            programming language, it is worth noting that the latter is stricter and less tolerant
+                            than the former. This happens because human languages have a built-in redundancy that
+                            allows some ambiguity to be resolved using context. </span></p>
+                    <p><span style="font-weight: 400;">On the other hand, programming languages have practically no
+                            redundancy, otherwise, it would be very easy to fall into ambiguity and not indicate the
+                            correct command. </span></p>
+                    <p><span style="font-weight: 400;">The fact that programming languages are stricter in this
+                            regard is due to the fact that computers are very precise in the instructions they like
+                            to receive. In addition, machines do not have the ability to clarify the meaning of an
+                            expression as a human being would.</span></p>
+                    <p><span style="font-weight: 400;">It is also essential that programming languages are fixed and
+                            closed to avoid confusion, while natural languages are open and allow combinations
+                            without the risk of making mistakes.</span></p>
+                    <p><span style="font-weight: 400;">Because of these circumstances, programming languages are
+                            designed from the ground up by talented developers focused on not ruining the various
+                            functionalities, whether it’s controlling a robot, medical equipment, space machines or
+                            a Facebook game, for instance.</span></p>
+                    <h3><strong>Main features of programming languages</strong></h3>
+                    <p><span style="font-weight: 400;">The popularity of a programming language depends on the
+                            features and utilities it provides to programmers. The features that a programming
+                            language must have to stand out are the following: </span></p>
+                    <ul>
+                        <li style="font-weight: 400;"><b>Simplicity:</b><span style="font-weight: 400;"> the
+                                language must offer clear and simple concepts that facilitate its learning and
+                                application, in a way that is simple to understand and maintain. Simplicity does not
+                                mean that it can be subtracted from the optimal power of functioning. </span></li>
+                        <li style="font-weight: 400;"><b>Naturalness</b><span style="font-weight: 400;">: this means
+                                that its application in the area for which it was designed must be done naturally,
+                                providing operators, structures and syntax for operators to work efficiently.</span>
+                        </li>
+                        <li style="font-weight: 400;"><b>Abstraction</b><span style="font-weight: 400;">: it is the
+                                ability to define and use complicated structures or operations while ignoring some
+                                details, which influences writing ability.</span></li>
+                        <li style="font-weight: 400;"><b>Efficiency</b><span style="font-weight: 400;">: Programming
+                                languages must be translated and executed efficiently so as not to take up too much
+                                memory space or require too much time.</span></li>
+                        <li style="font-weight: 400;"><b>Structuring</b><span style="font-weight: 400;">: the
+                                language allows programmers to write their codes according to structured programming
+                                concepts, to avoid creating errors.</span></li>
+                        <li style="font-weight: 400;"><b>Compactness</b><span style="font-weight: 400;">: with this
+                                characteristic, it is possible to express operations concisely, without having to
+                                write too many details. </span></li>
+                        <li style="font-weight: 400;"><b>Locality</b><span style="font-weight: 400;">: refers to the
+                                codes concentrating on the part of the program with which you are working at a given
+                                time.</span></li>
+                    </ul>
+
+                    <h3><strong>What is the best web programming language?</strong></h3>
+                    <p><span style="font-weight: 400;">Web development can be done through different programming
+                            languages that allow you to build a site or design an application. Defining which is the
+                            best web programming language is complicated because it depends on several factors.
+                            However, the following options stand out: </span></p>
+                    <ul>
+                        <li style="font-weight: 400;"><b>Java:</b><span style="font-weight: 400;"> multipurpose
+                                language that adjusts efficiently to web development. </span></li>
+                        <li style="font-weight: 400;"><b>Go:</b><span style="font-weight: 400;"> This is a general
+                                purpose, flexible language that facilitates the creation of applications. </span>
+                        </li>
+                        <li style="font-weight: 400;"><b>Ruby on Rails:</b><span style="font-weight: 400;"> allows
+                                you to design web applications quickly.</span></li>
+                        <li style="font-weight: 400;"><b>Python:</b><span style="font-weight: 400;"> it works in a
+                                wide variety of contexts and on the web has technical advantages. </span></li>
+                        <li style="font-weight: 400;"><b>JavaScript:</b><span style="font-weight: 400;"> it is on
+                                the client’s side and can be extended to the server for different functions. </span>
+                        </li>
+                    </ul>
+                    </aside>
+        </article>
+
+
+
+        <div class="layout--sidebar__body__bg"
+            style="background-image:url(https://res.cloudinary.com/hnpb47ejt/image/upload/e_gradient_fade:10,y_-0.99/e_gradient_fade:15,x_0.99/c_fill,f_auto,h_350,o_46,w_1170/v1457479002/ip2gpjb2vlggfnf5qubm.jpg)">
+        </div>
+        <div class="grid-container" id="web" style="font-size: 20px; font-weight: 20px;">
+            <main class="layout--sidebar__body__main" role="document">
+
+                <span class="Box-Callout__spacer" aria-hidden="true"></span>
+
+                <article aria-labelledby="document-title">
+
+
+
+
+                    <section tabindex="0">
+                        <h2>What is a Web Developer?</h2>
+                        <p>A web developer is responsible for programming the code that “tells” a website how to
+                            function. A developer builds a website from the bottom up, which means designing it in such
+                            a way that end users have no difficulty navigating the site. The website should not be so
+                            simple that it does not appeal to advanced users, nor should it be so complicated that the
+                            beginner is easily lost in the process. </p>
+                        <p>Web development can be divided into three parts: code that executes in a web browser and
+                            determines what customers or clients will see when they land on a website (client-side
+                            scripting); code that executes on a web server and powers the behind-the-scenes mechanics of
+                            how a website works (server-side scripting); and database technology, which helps to keep a
+                            website running smoothly and efficiently. Large-scale web projects often divide these tasks
+                            among multiple web developers.</p>
+                    </section>
+
+
+
+
+                    <section class="staggered-callout-container" data-heading="Ready to take the next step?"
+                        data-content='Our users have told us they need help getting started as a web developer. We’re gearing up to offer affordable, accredited, online training and education for the most in-demand professions. These programs are designed to develop the skills and knowledge that quality employers seek. <br/><br/>We’ll be releasing these programs shortly with reduced tuition for our earliest enrollees. If you’re interested in more information, sign up for updates below!<br/><br/><form method="POST" action=""><input type="hidden" name="csrfmiddlewaretoken" value="TYY5ROOHvOSWYilepEMMJyqcaT4czA3jObjgCxbOMauSqihuvm0YL2TLUe6NxsYH"><input type="hidden" name="career_id" value="438"><input type="email" placeholder="you@example.com" name="email" required="true" /><input class="alans-butt--grey" type="submit" value="Submit"/></form>'>
+                    </section>
+
+
+
+
+                    <section tabindex="0">
+                        <h2 id="what-does-a-web-developer-do">What does a Web Developer do?</h2>
+                        <p> <img src="images/m1.jpg"
+                                alt="A Web Developer is responsible for programming the code that “tells” a website how to function">
+                        </p>
+                        <p>A web developer builds and maintains websites with the client and consumer in mind. That is,
+                            the end design must include products and services offered and show how users may access
+                            these. For example, a customer may want a form to capture an end user’s e-mail to request
+                            additional information, provide a newsletter, or thank a customer for their business. </p>
+                        <p>One type of developer may focus on setting up the back end of a site (back-end developer)
+                            while another may focus on the client side to add style and functionality to the website
+                            itself (front-end developer).</p>
+                        <p>The work is typically very project-focused and involves collaborating with a team of people
+                            who help coordinate the client's needs with the end product. Work may include meeting with
+                            clients to discuss their needs and requirements for a website or discuss how to keep their
+                            website functioning and up-to-date. Web developers typically construct the layout of a
+                            website, creating a visually interesting home page and user-friendly design, and may
+                            sometimes write content for the website. After a website is up and running, developers make
+                            sure that the site is functional on all web browsers, testing and updating as needed. </p>
+                        <p>Web developers are familiar with technology and understand how computers and web servers
+                            operate. They are also very familiar with many software programs, web applications and web
+                            programming languages, such as hypertext markup language (HTML), JavaScript (JS), Ruby on
+                            Rails, and C++. They must be able to communicate effectively, set goals and meet deadlines.
+                        </p>
+                        <p> <img src="images/m2.jpg"
+                                alt="Web Developers are very familiar with many software programs, web applications and web programming languages.">
+                        </p>
+                        <p>
+                        <h2>Types of Web Developers:</h2>
+                        </p>
+                        <p><strong>Front-End Developers</strong> - A
+                            front-end developer is a web developer that codes the front end of a website. While web
+                            design is the way a website looks, front end development is how that design actually gets
+                            implemented on the web. </p>
+                        <p><strong>Back-End Developers</strong> - A back-end
+                            developer is someone who builds and maintains the technology needed to power the components
+                            which enable the user-facing side of a website to exist. Their back end code adds utility to
+                            everything the front-end designer creates. </p>
+                        <p><strong>Full Stack Developers</strong> - Full
+                            stack developers understand how every part of the web development process takes place and
+                            can guide on strategy and best practices. These developers will have an increasingly
+                            important role in the web development of the future, and are able to look at the 'big
+                            picture'. They are knowledgeable with the server side as well as the client side’s user
+                            experience. </p>
+                        <p><strong>JavaScript Developers</strong> -
+                            JavaScript (JS) is a type of web programming language that is supported across all web
+                            browsers and tools, and is the language that gives JavaScript developers control and power
+                            to create, enhance and modify websites. Even though a JavaScript developer typically works
+                            on the front-end, the programming language itself is not limited to front-end use only.</p>
+                    </section>
+
+
+
+
+
+
+
+                    <section class="hide-below-md" tabindex="0">
+                        <h2>Are you suited to be a web developer?</h2>
+
+                        <div class="personality-cta">
+                            <div class="personality-cta__human lazyload" aria-hidden="true"
+                                data-bg="https://d5lqosquewn6c.cloudfront.net/static/compiled/images/human-circle.c17f2903dc7a.svg">
+                            </div>
+
+                            <p>
+                                Web developers have distinct personalities. They tend to be
+                                artistic individuals, which means they’re creative, intuitive, sensitive, articulate,
+                                and expressive. They are unstructured, original, nonconforming, and innovative. Some of
+                                them are also conventional, meaning they’re conscientious and conservative.
+                            </p>
+                            <p>
+                                Does this sound like you? Take our free career test to find
+                                out if web developer is one of your top career matches.
+                            </p>
+
+
+                        </div>
+
+                    </section>
+
+
+
+
+                    <section tabindex="0">
+                        <h2 id="what-is-the-workplace-of-a-web-developer-like">What is the workplace of a Web Developer
+                            like?</h2>
+                        <p>A web developer may work full or part-time in a technology department or may choose to
+                            conduct business at home. Travel may be involved if a developer chooses to freelance. Some
+                            web developers freelance their skills to various organizations, while others choose to
+                            outsource their skills to organizations by using their expertise to act as consultants or
+                            independent contractors.</p>
+                    </section>
+                    <hr class="featurette-divider">
+
+                    <!-- /END THE FEATURETTES -->
+                </article>
+            </main>
+            <main class="layout--sidebar__body__main" id="android" role="document">
+
+                <span class="Box-Callout__spacer" aria-hidden="true"></span>
+
+                <article aria-labelledby="document-title">
+
+
+
+
+                    <section tabindex="0">
+                        <h2>What is an App Developer?
+                        </h2>
+                        <p>When it comes to technology, there are plenty of career paths one can take. One area that has
+                            seen an incredible rise in popularity is that of app development. There are literally
+                            millions of apps available today, from music apps to banking apps. that help people perform
+                            specific tasks. </p>
+                        <p>An app developer is a computer software engineer whose primary responsibilities include
+                            creating, testing and programming apps for computers, mobile phones, and tablets. These
+                            developers typically work in teams, and think of ideas and concepts either for the general
+                            public, or for a specific customer need.</p>
+                        <p>App developers understand coding languages and how to use them, and may also work alongside
+                            graphic artists, data scientists, and other software experts to create applications. They
+                            also test and fix any bugs that are found before the product is launched.
+
+                        </p>
+                    </section>
+
+
+
+
+                    <section class="staggered-callout-container" data-heading="Ready to take the next step?"
+                        data-content='Our users have told us they need help getting started as a web developer. We’re gearing up to offer affordable, accredited, online training and education for the most in-demand professions. These programs are designed to develop the skills and knowledge that quality employers seek. <br/><br/>We’ll be releasing these programs shortly with reduced tuition for our earliest enrollees. If you’re interested in more information, sign up for updates below!<br/><br/><form method="POST" action=""><input type="hidden" name="csrfmiddlewaretoken" value="TYY5ROOHvOSWYilepEMMJyqcaT4czA3jObjgCxbOMauSqihuvm0YL2TLUe6NxsYH"><input type="hidden" name="career_id" value="438"><input type="email" placeholder="you@example.com" name="email" required="true" /><input class="alans-butt--grey" type="submit" value="Submit"/></form>'>
+                    </section>
+
+
+
+                    <section tabindex="0">
+                        <h2 id="what-does-an-app-developer-do">What does an App Developer do?</h2>
+                        <p>Applications software can be written for a particular operating system (OS), such as Android,
+                            iOS or Windows. App developers typically specialize in a specific development area, such as
+                            mobile phone applications, graphics software, accounting software, or office suites.</p>
+                        <p>Marketing firms often conduct research in order to gather information relating to consumer
+                            needs. This information is then passed on to app developers who create new applications that
+                            meet the public's needs in terms of use and cost. Several versions are made of the same
+                            basic application that can be read by different types of devices, such as cell phones,
+                            tablets and personal computers. </p>
+                        <p>Once an app is complete and goes into production, the app developer works on creating patches
+                            (upgrades), that are periodically released to the public. App developers work for themselves
+                            just as often as they work for small, medium and large sized companies, building ‘native’
+                            experiences that allow people to complete tasks, consume content and interact with brands
+                            and other people.</p>
+                        <p><img alt="Two app developers creating the layout for a new app." class="lazyload"
+                                src="images/app.jpg" />
+                        </p>
+                        <p>Job Skills and Requirements for App Developers: </p>
+                        <p><strong>Analytical Skills</strong> - recognizing the needs of customers, and creating new
+                            applications that answer those needs<br />
+                            <strong>Communication</strong> - clearly communicating ideas to coders, teammates and
+                            management<br />
+                            <strong>Creativity</strong> - inventing new ways of handling problems and developing
+                            innovative applications <br />
+                            <strong>Customer Service</strong> - If dealing directly with clients and customers, having
+                            excellent customer service skills to answer questions and fix issues<br />
+                            <strong>Attention to Detail</strong> - having all parts of applications working together for
+                            the application to function<br />
+                            <strong>Problem-Solving</strong> - making decisions that move the project forward<br />
+                            <strong>Teamwork</strong> - As part of a large team of developers, working well with
+                            others<br />
+                            <strong>Technical Skills</strong> - being adept in computer languages and having good
+                            technical knowledge
+                        </p>
+                        <p>The following are three types of App Developers:</p>
+                        <p><strong>Mobile App Developers</strong><br />
+                            Smartphones and, more recently, tablets are increasingly becoming the computer of choice for
+                            more and more people. Mobile app developers have specialized training in design for small
+                            electronic equipment, and write computer programs for smartphones and other mobile devices.
+                        </p>
+                        <p>Instead of building for a larger PC screen, these developers are dealing with extremely small
+                            Android, iPhone, or BlackBerry screens. They are experienced in multi-media applications and
+                            multiple mobile computer programming languages. </p>
+                        <p>Mobile app developers typically write programs using either objective C, C++, Python, or
+                            Java. Each mobile device uses a specific programming language which app developers must
+                            understand.</p>
+                        <p><strong>Android Developers</strong><br />
+                            Android is the name of the mobile operating system owned by Google. Android typically comes
+                            installed on a variety of smartphones and tablets from many manufacturers such as Samsung,
+                            Sony, and Motorola (as well as on Google's own Nexus smartphone), giving users access to
+                            Google services such as Search, YouTube, Maps, Gmail, etc. </p>
+                        <p>An android developer develops applications for use on phones and tablets that utilize the
+                            android operating system - everything from interactive games to media players, to electronic
+                            book readers and global navigation software. The code required for android development is
+                            mostly open source and available freely for anyone interested in developing apps for use
+                            with the Android OS. </p>
+                        <p>It’s an exciting time to have a career in Android development. There is a healthy supply of
+                            jobs, demand for Android apps is accelerating, and technology is advancing.</p>
+                        <p><strong>iOS Developers</strong><br />
+                            iOS is a shortened way of saying ‘iPhone OS’, or ‘iPhone Operating System’, and is the
+                            mobile operating system that runs on Apple’s mobile devices such as iPhones and iPads. </p>
+                        <p>iOS developers build software – they know how to structure it, test it, debug it, and how to
+                            use source control. iOS developers know Swift or Objective-C (and some know both languages,
+                            which is best). </p>
+                        <p>They know iOS, which means they have a good grasp on build views; can handle user
+                            interaction; can display data; show alerts; handle navigation; display images, labels and
+                            text views; and integrate with REST APIs and parse JSON.</p>
+                    </section>
+                    <hr>
+                     <div class="text-center mt-5"  id="contact"><h2>contact us</h2></div>
+                     <div class="row mt-5">
+                        <div class="col-12 d-flex">
+                            <div class=" contact-info">
+                                <div class="contact-info-inner">
+                                    
+                                </div>
+                                <div class="contact-info-inner">
+                                    <h4>Email:</h4>
+                                    <p><a href="mailto:jeet1031996">info@scoder.com</a></p>
+                                </div>
+                                <div class="contact-info-inner">
+                                    <h4>Call:</h4>
+                                    <p><a href="callto:+9175758-58595, +9185758-57595">+9175758-58595, +9185758-57595</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <h2 id="faq-section " class="mt-5">
+                        Frequently Asked Questions
+                    </h2>
+
+                    <hr class="featurette-divider">
+
+                    <!-- /END THE FEATURETTES -->
+                </article>
+            </main>
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end" ><a href="#" style="text-decoration: none;">Back to top</a></p>
+            <p>&copy; 2021–2022 S-coder, Inc.</p>
+        </footer>
+        </main>
+
+
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
