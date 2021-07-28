@@ -8,7 +8,6 @@
     border-top: 5px solid rgb(74, 104, 74);
     border-bottom: 5px solid gray;
     padding: 30px 90px 40px 50px;
-    margin-left: 330px;
     transition: 0.5s;
     border-radius: 30px;
 }
@@ -23,3 +22,8 @@
     font-size: 22px;
 }
 
+.lead {
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 10px;
+}
